@@ -447,13 +447,13 @@ namespace uvc_camera {
 		std::string cameraRight_path = getenv("HOME") + cameraRight_name;
 
 		std::ofstream foutLeft(cameraLeft_path.c_str());
-		if (foutLeft == NULL)
+		if (foutLeft.fail())
 		{
 			printf ("Left camera matrix not found\n");
 		}
 
 		std::ofstream foutRight(cameraRight_path.c_str());	
-		if (foutRight == NULL)
+		if (foutRight.fail())
 		{
 			printf ("Right camera matrix not found\n");
 		}
